@@ -27,6 +27,7 @@ def calcNu(Re,Pr,charL,l_pipe): # calculate Nusselt numbers
         nu = (1-gamma)*lamNuNDev(2300,Pr,charL,l_pipe)+gamma*turbNu(10000,Pr,charL,l_pipe)
     else:
         print("Please choose a setup with nicer flow properties.")
+        # This will cause a crash!
     return nu
 
 def lamNuFDev(Re,Pr,charL,l_pipe): # laminar, flow fully developed, constant wall temperature
@@ -106,7 +107,7 @@ def StartTime(TRNData):
     TRNData[thisModule]["outputs"][2] = alpha # W/(m2*K) heat transfer coefficient fluid-pipe
     TRNData[thisModule]["outputs"][3] = vinf_fluid # m/s fluid velocity far from the wall
     TRNData[thisModule]["outputs"][4] = nu # Nusselt number
-    TRNData[thisModule]["outputs"][5] = hx_area # m2 heat exchanger area
+    TRNData[thisModule]["outputs"][5] = Pr # Prandtl number
     TRNData[thisModule]["outputs"][6] = Re # Reynolds number
 
     return
@@ -167,7 +168,7 @@ def Iteration(TRNData):
     TRNData[thisModule]["outputs"][2] = alpha # W/(m2*K) heat transfer coefficient fluid/pipe
     TRNData[thisModule]["outputs"][3] = vinf_fluid # m/s fluid velocity far from the wall
     TRNData[thisModule]["outputs"][4] = nu # Nusselt number
-    TRNData[thisModule]["outputs"][5] = hx_area_i # m2 inner heat exchanger area
+    TRNData[thisModule]["outputs"][5] = Pr # Prandtl number
     TRNData[thisModule]["outputs"][6] = Re # Reynolds number
 
     return
