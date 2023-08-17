@@ -6,5 +6,9 @@ This repository contains three files:
 * *pipeLengthCalculator.py* is a script to calculate the pipe length of a given heat exchanger design
 * *example.tpf* is an example Trnsys project where the effectiveness is implemented via Type 3157
 
+------
+Kirschstein, X.; Reber, J.; Zeus, R.; Schuster, M.; Bishara, N. Modelling of Floor Heating and Cooling in Residential Districts. Energies 2023, 16, 5850. https://doi.org/10.3390/en16155850
+
 **Type 653**: Thornton, J.; Bradley, D.; McDowell, T.; Blair, N.; Duffy, M.; LaHam, N.; Naik, A. TESSLibs 17 Ground Coupling LibraryMathematical Reference. Thermal Energy System Specialists, LLC, 2012.
+
 **Type 3157**: Bernier, N.; Marcotte, B.; Kummert, M. Calling Python from TRNSYS with CFFI. Polytechnique Montréal, 2022. https://doi.org/10.5281/zenodo.6523078.
